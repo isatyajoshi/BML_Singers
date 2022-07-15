@@ -1,149 +1,61 @@
 <!DOCTYPE html>
 <html>
-<body>   
-<main>
-   <div id="animation-1" class="animation">
-    <div class="red">/</div>
-    <div class="white light mask">
-      <div>Frederic</div>
-    </div>
-    <div class="white light mask">
-      <div>Colins</div>
-    </div>
-  </div>
-</main>
-<styles>
-  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300);
-@import url(https://fonts.googleapis.com/css?family=Arimo:400,700);
-
-$red: #cf4c4e;
-$ease-out: cubic-bezier(.19, .76, .32 ,1);
+<div class='box'>
+<h3>Satyanarayan Joshi
+</h3>
+</div>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
 
 body {
-  margin: 0;
+  font-family: 'Wendy One', sans-serif;
+  background: #F7CA05;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
-main {
-  font-family: Open Sans;
-  text-transform: uppercase;
-  line-height: 1;
+.box {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+h3 {
+  font-size:12vw;
+  white-space: nowrap;
   overflow: hidden;
-  background: linear-gradient(25deg, #091521, #7a8699);
+  line-height: 220px;
+  color: #F7CA05;
+  text-shadow: 0 10px 7px rgba(0,0,0,0.4),0 -10px 1px #fff;
+  letter-spacing: -3px;
 }
 
-.animation {
-  width: 20em;
-  height: 4em;
-  margin: 1em auto;
-  position: relative;
+h3:hover {
+  animation: glitch .3s linear infinite;
+  cursor: pointer;
 }
 
-.arimo {
-  font-family: Arimo;
-}
-
-.red {
-  color: $red;
-}
-
-.white {
-  color: white;
-}
-
-.light {
-  font-weight: 300;
-}
-
-.bold {
-  font-weight: 700;
-}
-
-.mask {
-  overflow: hidden;
-  position: relative;
-}
-
-
-/*********************
-* Animation 1
-*********************/
-
-@keyframes animation-1-slash {
+@keyframes glitch {
   0% {
-    opacity: 0;
-    transform: translate3d(6em, 0, 0);
+    transform: translate(0);
   }
-  
-  25% {
-    opacity: 0;
-    transform: translate3d(6em, 0, 0);
+  20% {
+    transform: translate(-2px, 2px);
   }
-  
-  45% {
-    opacity: 1;
+  40% {
+    transform: translate(-2px, -2px);
   }
-  
-  50% {
-    transform: translate3d(0, 0, 0);
+  60% {
+    transform: translate(2px, 2px);
   }
-}
-
-@keyframes animation-1-text-1 {
-  0% {left: -100%;}  
-  45% {left: -100%;}  
-  65% {left: 0;}
-}
-
-@keyframes animation-1-text-2 {
-  0% {left: -100%;}  
-  55% {left: -100%;}  
-  75% {left: 0;}
-}
-
-#animation-1 {
-  
-  div {
-    position: absolute;
+  80% {
+    transform: translate(2px, -2px);
   }
-  
-  & > div:first-child {
-    font-size: 4.8em;
-    top: -.13em;
-    animation: 4s $ease-out infinite alternate both animation-1-slash;
-  }
-  
-  & > div:nth-child(2),
-  & > div:nth-child(3) {
-    font-size: 2em;
-    height: 1em;
-    width: 5em;
-    
-    div {
-      animation: 4s $ease-out infinite alternate both;
-    }
-  }
-  
-  div:nth-child(2) {
-    top: 0;
-    left: .9em;
-    
-    div {
-      animation-name: animation-1-text-1;
-    }
-  }
-  
-  div:nth-child(3) {
-    top: .8em;
-    left: .5em;
-    
-    div {
-      animation-name: animation-1-text-2;
-    }
+  100% {
+    transform: translate(0);
   }
 }
-</styles>
-   </body>   
+  </style>
 </html>
