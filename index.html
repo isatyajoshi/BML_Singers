@@ -1,0 +1,23 @@
+<html>
+  <body>
+    Satyanarayan Joshi
+  </body>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
+
+  body { font-family: 'Wendy One', sans-serif;
+  background: transparent;
+  resize: both;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-size:10vw;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 210px;
+  color: #F7CA05;
+  text-shadow: 0 10px 7px rgba(0,0,0,0.4),0 -10px 1px #fff;
+  letter-spacing: -3px;
+}
+  </style>
+</html>
