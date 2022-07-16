@@ -9,7 +9,7 @@
 <body>
     <div id="myData"></div>
     <script>
-        fetch('people.json')
+        fetch(new URL('https://github.com/isatyajoshi/BML_Singers/blob/main/people.json'))
             .then(function (response) {
                 return response.json();
             })
